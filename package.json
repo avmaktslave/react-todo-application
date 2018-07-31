@@ -1,0 +1,59 @@
+{
+  "name": "newtodo",
+  "version": "1.0.0",
+  "description": "Simple todo app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "develop": "./node_modules/.bin/parcel index.html",
+    "build": "./node_modules/.bin/parcel build --out-dir public/ index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avmaktslave/react-todo-application.git"
+  },
+  "author": "Alexey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avmaktslave/react-todo-application/issues"
+  },
+  "homepage": "https://github.com/avmaktslave/react-todo-application#readme",
+  "dependencies": {
+    "history": "^4.7.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-redux": "^4.0.8",
+    "redux": "^4.0.0",
+    "redux-devtools-extension": "^2.13.5",
+    "redux-form": "^7.4.2",
+    "redux-saga": "^0.16.0",
+    "regenerator-runtime": "^0.12.0",
+    "reselect": "^3.0.1",
+    "uid": "^0.0.2"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^5.2.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.10.0",
+    "loader": "^2.1.1",
+    "parcel-bundler": "^1.9.7",
+    "prettier": "^1.14.0"
+  }
+}
