@@ -1,6 +1,6 @@
-import * as type from '../actions/actionsType';
+import * as type from '../constants';
 
-const reducer = (state = [], action) => {
+const todoReducer = (state = [], action) => {
   switch (action.type) {
     case type.createTodoItem:
       return [
@@ -21,4 +21,4 @@ const reducer = (state = [], action) => {
   }
 };
 
-export default reducer;
+export default todoReducer;

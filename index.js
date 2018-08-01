@@ -2,13 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import { reducer as formReducer } from 'redux-form';
 import ToDo from './src/components/ToDo';
-import reducer from './src/reducers/reducer';
+import rootReducer from './src/reducers';
 
 const root = document.getElementById('root');
 const store = createStore(
-  reducer,
+  rootReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 );
 

@@ -20,9 +20,6 @@ TodoList.propTypes = {
   ).isRequired,
 };
 
-const mapStateToProps = todos => ({ todos });
+const mapStateToProps = ({ todos }) => ({ todos });
 
-export default connect(
-  mapStateToProps,
-  null,
-)(TodoList);
+export default connect(mapStateToProps)(TodoList);

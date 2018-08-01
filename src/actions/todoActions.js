@@ -1,19 +1,25 @@
 import uid from 'uid';
-import * as type from './actionsType';
+import * as type from '../constants';
 
 export const createTodo = text => ({
   type: type.createTodoItem,
-  id: uid(),
-  text,
+  payload: {
+    id: uid(),
+    text,
+  },
 });
 
 export const editTodo = (id, text) => ({
   type: type.editTodoItem,
-  id,
-  text,
+  payload: {
+    id,
+    text,
+  },
 });
 
 export const deleteTodo = id => ({
   type: type.deleteTodoItem,
-  id,
+  payload: {
+    id,
+  },
 });
