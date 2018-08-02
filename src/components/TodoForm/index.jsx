@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import { func } from 'prop-types';
 import { connect } from 'react-redux';
-import { createTodo } from '../../actions/actions';
+import { Field, reduxForm } from 'redux-form';
+import { customInput } from '../TodoInput';
+import { createTodo } from '../../actions/todoActions';
 import Button from '../Button';
 
 class TodoForm extends Component {
-  inputText = React.createRef();
-
   static propTypes = {
     createTodo: func.isRequired,
+    reset: func.isRequired,
   };
 
   state = {
@@ -34,10 +35,16 @@ class TodoForm extends Component {
   };
 
   render() {
+    const { reset } = this.props;
     return (
       <form onSubmit={this.submitHandler}>
-        <input type="text" onChange={this.changeHandler} ref={this.inputText} />
-        <Button text="Add Todo" />
+        <Field
+          name="inputText"
+          component={customInput}
+          type="text"
+          onChange={this.changeHandler}
+        />
+        <Button text="Add Todo" onClick={reset} />
       </form>
     );
   }
@@ -50,4 +57,8 @@ const mapDispatchToProps = {
 export default connect(
   null,
   mapDispatchToProps,
-)(TodoForm);
+)(
+  reduxForm({
+    form: 'register',
+  })(TodoForm),
+);

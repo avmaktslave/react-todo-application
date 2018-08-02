@@ -1,0 +1,21 @@
+.textarea {
+  border-radius: 10px;
+  padding: 8px;
+  border-color: lightblue;
+  margin: 10px;
+}
+
+.li {
+  list-style-type: none;
+  background-color: azure;
+  border-radius: 5px;
+}
+
+.check {
+  background-color: aquamarine;
+}
+
+.span {
+  font-size: 1.2em;
+  margin-left: 35px;
+}

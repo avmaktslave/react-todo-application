@@ -6,16 +6,22 @@ const todoReducer = (state = [], action) => {
       return [
         ...state,
         {
-          id: action.id,
-          text: action.text,
+          id: action.payload.id,
+          text: action.payload.text,
         },
       ];
+
     case type.editTodoItem:
       return state.map(
-        todo => (todo.id !== action.id ? todo : { ...todo, text: action.text }),
+        todo =>
+          todo.id !== action.payload.id
+            ? todo
+            : { ...todo, text: action.payload.text },
       );
+
     case type.deleteTodoItem:
-      return state.filter(todo => todo.id !== action.id);
+      return state.filter(todo => todo.id !== action.payload.id);
+
     default:
       return state;
   }

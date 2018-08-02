@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/avmaktslave/react-todo-application#readme",
   "dependencies": {
+    "autoprefixer": "^9.0.2",
+    "classnames": "^2.2.6",
     "history": "^4.7.2",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
@@ -54,6 +56,8 @@
     "eslint-plugin-react": "^7.10.0",
     "loader": "^2.1.1",
     "parcel-bundler": "^1.9.7",
-    "prettier": "^1.14.0"
+    "postcss-modules": "^1.3.2",
+    "prettier": "^1.14.0",
+    "react-css-modules": "^4.7.4"
   }
 }
